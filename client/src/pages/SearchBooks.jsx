@@ -131,7 +131,12 @@ const SearchBooks = () => {
                     <Card.Title>{book.title}</Card.Title>
                     <p className='small'>Authors: {book.authors}</p>
                     <Card.Text>{book.description}</Card.Text>
-                    {/* {!Auth.loggedIn() && <a href={book.link} target="_blank" rel="noopener noreferrer">View on Google Books</a>} */}
+                    {Auth.loggedIn() && (
+                      <Button variant="primary" href={book.link} target="_blank" rel="noopener noreferrer" className="mb-3">
+                      View on Google Books
+                    </Button>
+                    )}
+                    <br />                    
                     {Auth.loggedIn() && (
                       <Button
                         disabled={savedBookIds?.some((savedBookId) => savedBookId === book.bookId)}
