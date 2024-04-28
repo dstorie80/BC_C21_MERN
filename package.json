@@ -1,19 +1,17 @@
 {
+  "homepage": "https://dstorie80.github.io/BC_C21_MERN",
   "name": "googlebooks-app",
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
-  "homepage": "https://dstorie80.github.io",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "react-scripts start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "build": "cd client && npm run build",
     "render-build": "npm install && npm run build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "deploy": "gh-pages -d build"
 
   },
   "keywords": [],
@@ -23,6 +21,7 @@
     "concurrently": "^8.2.0"
   },
   "dependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "react-scripts": "^0.9.5"
   }
 }
